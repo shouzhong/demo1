@@ -29,12 +29,12 @@ class _SecondPageState extends State<SecondPage> {
               width: size(200),
               height: size(200),
             ),
-            RaisedButton(
-              onPressed: () {
+            GestureDetector(
+              onTap: () {
                 Navigator.pop(context);
               },
               child: Text("back"),
-            )
+            ),
           ],
         ),
 //        child:RaisedButton(
