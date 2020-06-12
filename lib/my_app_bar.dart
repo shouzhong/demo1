@@ -17,13 +17,13 @@ class MyAppBar extends StatefulWidget implements PreferredSizeWidget {
 class MyAppBarState extends State<MyAppBar> {
   @override
   Widget build(BuildContext context) {
-    if (widget.isBack) {
-      return Container(
+    return Container(
 //      color: Colors.blue,
-        child: SafeArea(
-          top: true,
-          child: Stack(
-            children: [
+      child: SafeArea(
+        top: true,
+        child: Stack(
+          children: [
+            if (widget.isBack)
               InkWell(
                   onTap: () {
                     Navigator.pop(context);
@@ -38,24 +38,7 @@ class MyAppBarState extends State<MyAppBar> {
                       height: size(40),
                     ),
                   )),
-              Container(
-                height: size(88),
-                alignment: Alignment.center,
-                child: Text(
-                  widget.title,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: size(36), color: Color(0xff333333)),
-                ),
-              )
-            ],
-          ),
-        ),
-      );
-    } else {
-      return Container(
-          child: SafeArea(
-            top: true,
-            child: Container(
+            Container(
               height: size(88),
               alignment: Alignment.center,
               child: Text(
@@ -63,9 +46,10 @@ class MyAppBarState extends State<MyAppBar> {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: size(36), color: Color(0xff333333)),
               ),
-            ),
-          )
-      );
-    }
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

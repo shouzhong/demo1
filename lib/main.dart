@@ -1,3 +1,4 @@
+import 'package:demo1/route_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:ui';
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xffec603b),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Home Page'),
+      home: RoutePage(),
+//      home: MyHomePage(title: 'Home Page'),
     );
 //    return MaterialApp(
 //      title: 'Flutter Demo',
