@@ -19,25 +19,25 @@ class _StackPageState extends State<StackPage> {
           alignment: AlignmentDirectional.topCenter,
           children: [
             Positioned(
-              top: size(100),
-              width: size(200),
-              height: size(200),
+              top: 100.mpx,
+              width: 200.mpx,
+              height: 200.mpx,
               child: Container(
                 color: Color(0xffff0000),
               ),
             ),
             Positioned(
-              top: size(400),
-              width: size(200),
-              height: size(200),
+              top: 400.mpx,
+              width: 200.mpx,
+              height: 200.mpx,
               child: Container(
                 color: Color(0xff00ff00),
               ),
             ),
             Positioned(
-              top: size(700),
-              width: size(200),
-              height: size(200),
+              top: 700.mpx,
+              width: 200.mpx,
+              height: 200.mpx,
               child: Container(
                 color: Color(0xff0000ff),
               ),

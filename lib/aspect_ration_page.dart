@@ -16,7 +16,7 @@ class _AspectRatioPageState extends State<AspectRatioPage> {
       appBar: MyAppBar(title: "AspectRatio Page",),
       body: Center(
         child: Container(
-          height: size(200),
+          height: 200.mpx,
           child: AspectRatio(
             aspectRatio: 1.5,
             child: Container(color: Colors.blue,),

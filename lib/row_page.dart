@@ -19,17 +19,17 @@ class _RowPageState extends State<RowPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            width: size(250),
+            width: 250.mpx,
             alignment: Alignment.center,
             child: Text("item1"),
           ),
           Container(
-            width: size(250),
+            width: 250.mpx,
             alignment: Alignment.center,
             child: Text("item2"),
           ),
           Container(
-            width: size(250),
+            width: 250.mpx,
             alignment: Alignment.center,
             child: Text("item3"),
           ),

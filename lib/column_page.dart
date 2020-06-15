@@ -18,17 +18,17 @@ class _ColumnPageState extends State<ColumnPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            height: size(200),
+            height: 200.mpx,
             alignment: Alignment.center,
             child: Text("item1"),
           ),
           Container(
-            height: size(200),
+            height: 200.mpx,
             alignment: Alignment.center,
             child: Text("item2"),
           ),
           Container(
-            height: size(200),
+            height: 200.mpx,
             alignment: Alignment.center,
             child: Text("item3"),
           ),

@@ -16,11 +16,11 @@ class _ListViewPageState extends State<ListViewPage> {
       appBar: MyAppBar(title: "List Page",),
       body: ListView(
         shrinkWrap: true,
-        padding: EdgeInsets.all(size(30)),
+        padding: EdgeInsets.all(30.mpx),
         children: [
           for (int i = 0; i < 50; i++)
             Container(
-              padding: EdgeInsets.all(size(20)),
+              padding: EdgeInsets.all(20.mpx),
               child: Text("item$i"),
             )
         ],

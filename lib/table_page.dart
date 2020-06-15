@@ -17,13 +17,13 @@ class _TablePageState extends State<TablePage> {
       body: Center(
         child: Table(
           columnWidths: {
-            0: FixedColumnWidth(size(200)),
-            1: FixedColumnWidth(size(400)),
-            2: FixedColumnWidth(size(100)),
+            0: FixedColumnWidth(200.mpx),
+            1: FixedColumnWidth(400.mpx),
+            2: FixedColumnWidth(100.mpx),
           },
           border: TableBorder.all(
             color: Color(0xff333333),
-            width: size(2),
+            width: 2.mpx,
             style: BorderStyle.solid
           ),
           children: [

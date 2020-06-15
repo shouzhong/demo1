@@ -49,12 +49,12 @@ class _RoutePageState extends State<RoutePage> {
       appBar: MyAppBar(title: "Route Page", isBack: false,),
       body: ListView(
         shrinkWrap: true,
-        padding: EdgeInsets.all(size(30)),
+        padding: EdgeInsets.all(30.mpx),
         children: [
           for (String item in tags)
             Container(
               alignment: Alignment.topCenter,
-              padding: EdgeInsets.all(size(10)),
+              padding: EdgeInsets.all(10.mpx),
               child: RaisedButton(
                 child: Text(item),
                 onPressed: () {

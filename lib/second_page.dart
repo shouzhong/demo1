@@ -21,13 +21,13 @@ class _SecondPageState extends State<SecondPage> {
           children: [
             CachedNetworkImage(
               imageUrl: "https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1906469856,4113625838&fm=26&gp=0.jpg",
-              width: size(200),
-              height: size(200),
+              width: 200.mpx,
+              height: 200.mpx,
             ),
             Image.network(
               "https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1906469856,4113625838&fm=26&gp=0.jpg",
-              width: size(200),
-              height: size(200),
+              width: 200.mpx,
+              height: 200.mpx,
             ),
             GestureDetector(
               onTap: () {

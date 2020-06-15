@@ -16,26 +16,26 @@ class _FlowPageState extends State<FlowPage> {
     return Scaffold(
       appBar: MyAppBar(title: "Flow Page",),
       body: Flow(
-        delegate: _TestFlowDelegate(margin: EdgeInsets.all(size(10))),
+        delegate: _TestFlowDelegate(margin: EdgeInsets.all(10.mpx)),
         children: [
           Container(
-            width: size(300),
-            height: size(100),
+            width: 300.mpx,
+            height: 100.mpx,
             color: Color(0xffff0000),
           ),
           Container(
-            width: size(200),
-            height: size(100),
+            width: 200.mpx,
+            height: 100.mpx,
             color: Color(0xff00ff00),
           ),
           Container(
-            width: size(200),
-            height: size(100),
+            width: 200.mpx,
+            height: 100.mpx,
             color: Color(0xff0000ff),
           ),
           Container(
-            width: size(400),
-            height: size(100),
+            width: 400.mpx,
+            height: 100.mpx,
             color: Color(0xffff0000),
           ),
         ],

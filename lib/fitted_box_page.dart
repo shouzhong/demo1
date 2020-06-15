@@ -16,8 +16,8 @@ class _FittedBoxPageState extends State<FittedBoxPage> {
       appBar: MyAppBar(title: "FittedBox Page",),
       body: Center(
         child: Container(
-          width: size(200),
-          height: size(200),
+          width: 200.mpx,
+          height: 200.mpx,
           color: Colors.red,
           child: FittedBox(
             child: Container(

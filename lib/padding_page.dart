@@ -15,7 +15,7 @@ class _PaddingPageState extends State<PaddingPage> {
     return Scaffold(
       appBar: MyAppBar(title: "Padding Page",),
       body: Padding(
-        padding: EdgeInsets.all(size(30)),
+        padding: EdgeInsets.all(30.mpx),
         child: Text("text"),
       ),
     );
