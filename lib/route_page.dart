@@ -1,22 +1,33 @@
 
 import 'package:demo1/align_page.dart';
-import 'package:demo1/aspect_ration_page.dart';
+import 'package:demo1/aspect_ratio_page.dart';
+import 'package:demo1/baseline_page.dart';
 import 'package:demo1/center_page.dart';
 import 'package:demo1/column_page.dart';
+import 'package:demo1/constrained_box_page.dart';
 import 'package:demo1/container_page.dart';
 import 'package:demo1/custom_multi_child_layout_page.dart';
+import 'package:demo1/custom_single_child_layout_page.dart';
 import 'package:demo1/fitted_box_page.dart';
 import 'package:demo1/flow_page.dart';
+import 'package:demo1/fractionally_sized_box_page.dart';
+import 'package:demo1/future_builder_page.dart';
+import 'package:demo1/intrinsic_page.dart';
 import 'package:demo1/list_view_page.dart';
+import 'package:demo1/overflow_box_page.dart';
 import 'package:demo1/padding_page.dart';
 import 'package:demo1/row_page.dart';
+import 'package:demo1/sized_box_page.dart';
 import 'package:demo1/stack_page.dart';
 import 'package:demo1/table_page.dart';
+import 'package:demo1/transform_page.dart';
 import 'package:demo1/utils.dart';
 import 'package:demo1/wrap_page.dart';
 import 'package:flutter/material.dart';
 
+import 'limited_box_page.dart';
 import 'my_app_bar.dart';
+import 'offstage_page.dart';
 
 class RoutePage extends StatefulWidget {
   @override
@@ -33,6 +44,16 @@ class _RoutePageState extends State<RoutePage> {
     "Align",
     "FittedBox",
     "AspectRatio",
+    "ConstrainedBox",
+    "Baseline",
+    "FractionallySizedBox",
+    "Intrinsic",
+    "LimitedBox",
+    "Offstage",
+    "OverflowBox",
+    "SizedBox",
+    "Transform",
+    "CustomSingleChildLayout",
     "Row",
     "Column",
     "Stack",
@@ -41,6 +62,7 @@ class _RoutePageState extends State<RoutePage> {
     "Wrap",
     "ListView",
     "CustomMultiChildLayout",
+    "FutureBuilder",
   ];
 
   @override
@@ -65,6 +87,16 @@ class _RoutePageState extends State<RoutePage> {
                     item == "Align" ? AlignPage() :
                     item == "FittedBox" ? FittedBoxPage() :
                     item == "AspectRatio" ? AspectRatioPage() :
+                    item == "ConstrainedBox" ? ConstrainedBoxPage() :
+                    item == "Baseline" ? BaselinePage() :
+                    item == "FractionallySizedBox" ? FractionallySizedBoxPage() :
+                    item == "Intrinsic" ? IntrinsicPage() :
+                    item == "LimitedBox" ? LimitedBoxPage() :
+                    item == "Offstage" ? OffstagePage() :
+                    item == "OverflowBox" ? OverflowBoxPage() :
+                    item == "SizedBox" ? SizedBoxPage() :
+                    item == "Transform" ? TransformPage() :
+                    item == "CustomSingleChildLayout" ? CustomSingleChildLayoutPage() :
                     item == "Row" ? RowPage() :
                     item == "Column" ? ColumnPage() :
                     item == "Stack" ? StackPage() :
@@ -73,6 +105,7 @@ class _RoutePageState extends State<RoutePage> {
                     item == "Wrap" ? WrapPage() :
                     item == "ListView" ? ListViewPage() :
                     item == "CustomMultiChildLayout" ? CustomMultiChildLayoutPage() :
+                    item == "FutureBuilder" ? FutureBuilderPage() :
                     null;
                   Navigator.push(context, MaterialPageRoute(builder: (context) => w));
                 },
