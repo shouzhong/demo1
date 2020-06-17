@@ -1,6 +1,8 @@
+import 'package:demo1/load_state.dart';
 import 'package:demo1/my_app_bar.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class FutureBuilderPage extends StatefulWidget {
   @override
@@ -11,40 +13,43 @@ class FutureBuilderPage extends StatefulWidget {
 
 class _FutureBuilderPageState extends State<FutureBuilderPage> {
 
-
+  LoadState _loadState = LoadState.State_Loading;
+  String _data = "";
 
   @override
   Widget build(BuildContext context) {
+    if (_loadState == LoadState.State_Loading) _getNews();
     return Scaffold(
       appBar: MyAppBar(title: "FutureBuilder Page",),
-      body: _getBody(),
+      body: LoadStateLayout(
+        state: _loadState,
+        errorRetry: () {
+          setState(() {
+            _loadState = LoadState.State_Loading;
+          });
+        },
+        successWidget: Center(
+          child: Text(_data),
+        ),
+      ),
     );
   }
-
-  Widget _getBody() {
-    return FutureBuilder(
-      future: _getNews(),
-      builder: (BuildContext context, AsyncSnapshot<Response> snapshot) {
-        if (snapshot.hasData) {
-          return Text("${snapshot.data.toString()}");
-        } else if (snapshot.hasError) {
-          return Center(
-            child: Text("${snapshot.error.toString()}"),
-          );
-        } else {
-          return Center(
-            child: Text("正在加载中"),
-          );
-        }
-      },
-    );
-  }
+  
 
   Future<Response> _getNews() async {
-    await Future.delayed(Duration(seconds: 3));
     String url = "http://v.juhe.cn/toutiao/index";
     String key = "4c52313fc9247e5b4176aed5ddd56ad7";
     String type = "keji";
-    return await Dio().get(url, queryParameters: {"type": type, "key": key});
+    return await Dio().get(url, queryParameters: {"type": type, "key": key}).then((value) {
+      _data = value.data.toString();
+      setState(() {
+        _loadState = LoadState.State_Success;
+      });
+    }).catchError((e) {
+      Fluttertoast.showToast(msg: e.toString());
+      setState(() {
+        _loadState = LoadState.State_Error;
+      });
+    });
   }
 }
