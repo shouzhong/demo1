@@ -37,6 +37,8 @@ dependencies:
   image_picker: ^0.6.7+1
   # sp
   shared_preferences: ^0.5.7+3
+  # refresh
+  flutter_easyrefresh: ^2.1.1
 
 dev_dependencies:
   flutter_test:

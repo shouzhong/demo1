@@ -12,10 +12,14 @@ import 'package:demo1/fitted_box_page.dart';
 import 'package:demo1/flow_page.dart';
 import 'package:demo1/fractionally_sized_box_page.dart';
 import 'package:demo1/future_builder_page.dart';
+import 'package:demo1/grid_view_page.dart';
 import 'package:demo1/intrinsic_page.dart';
 import 'package:demo1/list_view_page.dart';
+import 'package:demo1/load_page.dart';
 import 'package:demo1/overflow_box_page.dart';
 import 'package:demo1/padding_page.dart';
+import 'package:demo1/refresh_indicator_page.dart';
+import 'package:demo1/refresh_page.dart';
 import 'package:demo1/row_page.dart';
 import 'package:demo1/sized_box_page.dart';
 import 'package:demo1/stack_page.dart';
@@ -62,7 +66,11 @@ class _RoutePageState extends State<RoutePage> {
     "Wrap",
     "ListView",
     "CustomMultiChildLayout",
+    "GridView",
+    "RefreshIndicator",
     "FutureBuilder",
+    "Load",
+    "Refresh",
   ];
 
   @override
@@ -105,7 +113,11 @@ class _RoutePageState extends State<RoutePage> {
                     item == "Wrap" ? WrapPage() :
                     item == "ListView" ? ListViewPage() :
                     item == "CustomMultiChildLayout" ? CustomMultiChildLayoutPage() :
+                    item == "GridView" ? GridViewPage() :
+                    item == "RefreshIndicator" ? RefreshIndicatorPage() :
                     item == "FutureBuilder" ? FutureBuilderPage() :
+                    item == "Load" ? LoadPage() :
+                    item == "Refresh" ? RefreshPage() :
                     null;
                   Navigator.push(context, MaterialPageRoute(builder: (context) => w));
                 },
