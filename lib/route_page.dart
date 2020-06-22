@@ -1,6 +1,7 @@
 
 import 'package:demo1/align_page.dart';
 import 'package:demo1/animated_container_page.dart';
+import 'package:demo1/animated_cross_fade_page.dart';
 import 'package:demo1/aspect_ratio_page.dart';
 import 'package:demo1/baseline_page.dart';
 import 'package:demo1/center_page.dart';
@@ -76,6 +77,7 @@ class _RoutePageState extends State<RoutePage> {
     "Image",
     "Input",
     "AnimatedContainer",
+    "AnimatedCrossFade",
     "FutureBuilder",
     "Load",
     "Refresh",
@@ -124,6 +126,7 @@ class _RoutePageState extends State<RoutePage> {
                 item == "Image" ? ImagePage() :
                 item == "Input" ? InputPage() :
                 item == "AnimatedContainer" ? AnimatedContainerPage() :
+                item == "AnimatedCrossFade" ? AnimatedCrossFadePage() :
                 item == "FutureBuilder" ? FutureBuilderPage() :
                 item == "Load" ? LoadPage() :
                 item == "Refresh" ? RefreshPage() :
