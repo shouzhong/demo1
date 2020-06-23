@@ -18,20 +18,29 @@ class _RowPageState extends State<RowPage> {
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            width: 250.mpx,
-            alignment: Alignment.center,
-            child: Text("item1"),
+          Expanded(
+            flex: 1,
+            child: Container(
+              alignment: Alignment.center,
+              color: Colors.red,
+              child: Text("item1"),
+            ),
           ),
-          Container(
-            width: 250.mpx,
-            alignment: Alignment.center,
-            child: Text("item2"),
+          Expanded(
+            flex: 1,
+            child: Container(
+              alignment: Alignment.center,
+              color: Colors.green,
+              child: Text("item2"),
+            ),
           ),
-          Container(
-            width: 250.mpx,
-            alignment: Alignment.center,
-            child: Text("item3"),
+          Expanded(
+            flex: 1,
+            child: Container(
+              alignment: Alignment.center,
+              color: Colors.blue,
+              child: Text("item3"),
+            ),
           ),
         ],
       ),

@@ -1,5 +1,7 @@
 
+import 'package:demo1/rotation_transition_page.dart';
 import 'package:demo1/align_page.dart';
+import 'package:demo1/animated_builder_page.dart';
 import 'package:demo1/animated_container_page.dart';
 import 'package:demo1/animated_cross_fade_page.dart';
 import 'package:demo1/aspect_ratio_page.dart';
@@ -10,11 +12,14 @@ import 'package:demo1/constrained_box_page.dart';
 import 'package:demo1/container_page.dart';
 import 'package:demo1/custom_multi_child_layout_page.dart';
 import 'package:demo1/custom_single_child_layout_page.dart';
+import 'package:demo1/decorated_box_transition_page.dart';
+import 'package:demo1/fade_transition_page.dart';
 import 'package:demo1/fitted_box_page.dart';
 import 'package:demo1/flow_page.dart';
 import 'package:demo1/fractionally_sized_box_page.dart';
 import 'package:demo1/future_builder_page.dart';
 import 'package:demo1/grid_view_page.dart';
+import 'package:demo1/hero_page.dart';
 import 'package:demo1/image_page.dart';
 import 'package:demo1/input.dart';
 import 'package:demo1/intrinsic_page.dart';
@@ -22,10 +27,13 @@ import 'package:demo1/list_view_page.dart';
 import 'package:demo1/load_page.dart';
 import 'package:demo1/overflow_box_page.dart';
 import 'package:demo1/padding_page.dart';
+import 'package:demo1/positioned_transition_page.dart';
 import 'package:demo1/refresh_indicator_page.dart';
 import 'package:demo1/refresh_page.dart';
 import 'package:demo1/row_page.dart';
+import 'package:demo1/size_transition_page.dart';
 import 'package:demo1/sized_box_page.dart';
+import 'package:demo1/slide_transition_page.dart';
 import 'package:demo1/stack_page.dart';
 import 'package:demo1/table_page.dart';
 import 'package:demo1/text_page.dart';
@@ -34,6 +42,7 @@ import 'package:demo1/utils.dart';
 import 'package:demo1/wrap_page.dart';
 import 'package:flutter/material.dart';
 
+import 'scale_transition_page.dart';
 import 'limited_box_page.dart';
 import 'my_app_bar.dart';
 import 'offstage_page.dart';
@@ -78,6 +87,15 @@ class _RoutePageState extends State<RoutePage> {
     "Input",
     "AnimatedContainer",
     "AnimatedCrossFade",
+    "Hero",
+    "AnimatedBuilder",
+    "DecoratedBoxTransition",
+    "FadeTransition",
+    "PositionedTransition",
+    "RotationTransition",
+    "ScaleTransition",
+    "SizeTransition",
+    "SlideTransition",
     "FutureBuilder",
     "Load",
     "Refresh",
@@ -127,6 +145,15 @@ class _RoutePageState extends State<RoutePage> {
                 item == "Input" ? InputPage() :
                 item == "AnimatedContainer" ? AnimatedContainerPage() :
                 item == "AnimatedCrossFade" ? AnimatedCrossFadePage() :
+                item == "Hero" ? HeroPage() :
+                item == "AnimatedBuilder" ? AnimatedBuilderPage() :
+                item == "DecoratedBoxTransition" ? DecoratedBoxTransitionPage() :
+                item == "FadeTransition" ? FadeTransitionPage() :
+                item == "PositionedTransition" ? PositionedTransitionPage() :
+                item == "RotationTransition" ? RotationTransitionPage() :
+                item == "ScaleTransition" ? ScaleTransitionPage() :
+                item == "SizeTransition" ? SizeTransitionPage() :
+                item == "SlideTransition" ? SlideTransitionPage() :
                 item == "FutureBuilder" ? FutureBuilderPage() :
                 item == "Load" ? LoadPage() :
                 item == "Refresh" ? RefreshPage() :
