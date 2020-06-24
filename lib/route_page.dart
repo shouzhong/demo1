@@ -1,4 +1,11 @@
 
+import 'package:demo1/animated_list_page.dart';
+import 'package:demo1/animated_modal_barrier_page.dart';
+import 'package:demo1/animated_opacity_page.dart';
+import 'package:demo1/animated_physical_model_page.dart';
+import 'package:demo1/animated_positioned_page.dart';
+import 'package:demo1/animated_size_page.dart';
+import 'package:demo1/animated_widget_page.dart';
 import 'package:demo1/rotation_transition_page.dart';
 import 'package:demo1/align_page.dart';
 import 'package:demo1/animated_builder_page.dart';
@@ -42,6 +49,7 @@ import 'package:demo1/utils.dart';
 import 'package:demo1/wrap_page.dart';
 import 'package:flutter/material.dart';
 
+import 'animated_default_text_style_page.dart';
 import 'scale_transition_page.dart';
 import 'limited_box_page.dart';
 import 'my_app_bar.dart';
@@ -96,6 +104,14 @@ class _RoutePageState extends State<RoutePage> {
     "ScaleTransition",
     "SizeTransition",
     "SlideTransition",
+    "AnimatedDefaultTextStyle",
+    "AnimatedList",
+    "AnimatedModalBarrier",
+    "AnimatedOpacity",
+    "AnimatedPhysicalModel",
+    "AnimatedPositioned",
+    "AnimatedSize",
+    "AnimatedWidget",
     "FutureBuilder",
     "Load",
     "Refresh",
@@ -154,6 +170,14 @@ class _RoutePageState extends State<RoutePage> {
                 item == "ScaleTransition" ? ScaleTransitionPage() :
                 item == "SizeTransition" ? SizeTransitionPage() :
                 item == "SlideTransition" ? SlideTransitionPage() :
+                item == "AnimatedDefaultTextStyle" ? AnimatedDefaultTextStylePage() :
+                item == "AnimatedList" ? AnimatedListPage() :
+                item == "AnimatedModalBarrier" ? AnimatedModalBarrierPage() :
+                item == "AnimatedOpacity" ? AnimatedOpacityPage() :
+                item == "AnimatedPhysicalModel" ? AnimatedPhysicalModelPage() :
+                item == "AnimatedPositioned" ? AnimatedPositionedPage() :
+                item == "AnimatedSize" ? AnimatedSizePage() :
+                item == "AnimatedWidget" ? AnimatedWidgetPage() :
                 item == "FutureBuilder" ? FutureBuilderPage() :
                 item == "Load" ? LoadPage() :
                 item == "Refresh" ? RefreshPage() :
