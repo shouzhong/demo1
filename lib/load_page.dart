@@ -17,8 +17,13 @@ class _LoadPageState extends State<LoadPage> {
   String _data = "";
 
   @override
+  void initState() {
+    _getNews();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    if (_loadState == LoadState.State_Loading) _getNews();
     return Scaffold(
       appBar: MyAppBar(title: "FutureBuilder Page",),
       body: LoadStateLayout(

@@ -6,6 +6,11 @@ import 'package:demo1/animated_physical_model_page.dart';
 import 'package:demo1/animated_positioned_page.dart';
 import 'package:demo1/animated_size_page.dart';
 import 'package:demo1/animated_widget_page.dart';
+import 'package:demo1/dismissible_page.dart';
+import 'package:demo1/gesture_detector_page.dart';
+import 'package:demo1/ignore_pointer_page.dart';
+import 'package:demo1/long_press_draggable_page.dart';
+import 'package:demo1/opacity_page.dart';
 import 'package:demo1/rotation_transition_page.dart';
 import 'package:demo1/align_page.dart';
 import 'package:demo1/animated_builder_page.dart';
@@ -49,7 +54,9 @@ import 'package:demo1/utils.dart';
 import 'package:demo1/wrap_page.dart';
 import 'package:flutter/material.dart';
 
+import 'absorb_pointer_page.dart';
 import 'animated_default_text_style_page.dart';
+import 'navigator_page.dart';
 import 'scale_transition_page.dart';
 import 'limited_box_page.dart';
 import 'my_app_bar.dart';
@@ -112,6 +119,13 @@ class _RoutePageState extends State<RoutePage> {
     "AnimatedPositioned",
     "AnimatedSize",
     "AnimatedWidget",
+    "LongPressDraggable",
+    "GestureDetector",
+    "Dismissible",
+    "IgnorePointer",
+    "AbsorbPointer",
+    "Navigator",
+    "Opacity",
     "FutureBuilder",
     "Load",
     "Refresh",
@@ -178,6 +192,13 @@ class _RoutePageState extends State<RoutePage> {
                 item == "AnimatedPositioned" ? AnimatedPositionedPage() :
                 item == "AnimatedSize" ? AnimatedSizePage() :
                 item == "AnimatedWidget" ? AnimatedWidgetPage() :
+                item == "LongPressDraggable" ? LongPressDraggablePage() :
+                item == "GestureDetector" ? GestureDetectorPage() :
+                item == "Dismissible" ? DismissiblePage() :
+                item == "IgnorePointer" ? IgnorePointerPage() :
+                item == "AbsorbPointer" ? AbsorbPointerPage() :
+                item == "Navigator" ? NavigatorPage() :
+                item == "Opacity" ? OpacityPage() :
                 item == "FutureBuilder" ? FutureBuilderPage() :
                 item == "Load" ? LoadPage() :
                 item == "Refresh" ? RefreshPage() :
