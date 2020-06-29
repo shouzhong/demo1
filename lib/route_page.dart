@@ -6,11 +6,19 @@ import 'package:demo1/animated_physical_model_page.dart';
 import 'package:demo1/animated_positioned_page.dart';
 import 'package:demo1/animated_size_page.dart';
 import 'package:demo1/animated_widget_page.dart';
+import 'package:demo1/backdrop_filter_page.dart';
+import 'package:demo1/clip_path_page.dart';
+import 'package:demo1/clip_rect_page.dart';
+import 'package:demo1/custom_paint_page.dart';
+import 'package:demo1/decorated_box_page.dart';
 import 'package:demo1/dismissible_page.dart';
+import 'package:demo1/fractional_translation_page.dart';
 import 'package:demo1/gesture_detector_page.dart';
 import 'package:demo1/ignore_pointer_page.dart';
 import 'package:demo1/long_press_draggable_page.dart';
+import 'package:demo1/nested_scroll_view_page.dart';
 import 'package:demo1/opacity_page.dart';
+import 'package:demo1/rotated_box_page.dart';
 import 'package:demo1/rotation_transition_page.dart';
 import 'package:demo1/align_page.dart';
 import 'package:demo1/animated_builder_page.dart';
@@ -47,6 +55,8 @@ import 'package:demo1/size_transition_page.dart';
 import 'package:demo1/sized_box_page.dart';
 import 'package:demo1/slide_transition_page.dart';
 import 'package:demo1/stack_page.dart';
+import 'package:demo1/stream_builder_page.dart';
+import 'package:demo1/tab_bar_page.dart';
 import 'package:demo1/table_page.dart';
 import 'package:demo1/text_page.dart';
 import 'package:demo1/transform_page.dart';
@@ -56,6 +66,7 @@ import 'package:flutter/material.dart';
 
 import 'absorb_pointer_page.dart';
 import 'animated_default_text_style_page.dart';
+import 'clip_oval_page.dart';
 import 'navigator_page.dart';
 import 'scale_transition_page.dart';
 import 'limited_box_page.dart';
@@ -126,7 +137,18 @@ class _RoutePageState extends State<RoutePage> {
     "AbsorbPointer",
     "Navigator",
     "Opacity",
+    "DecoratedBox",
+    "FractionalTranslation",
+    "RotatedBox",
+    "ClipOval",
+    "ClipPath",
+    "ClipRect",
+    "CustomPaint",
+    "BackdropFilter",
     "FutureBuilder",
+    "StreamBuilder",
+    "NestedScrollView",
+    "TabBar",
     "Load",
     "Refresh",
   ];
@@ -199,7 +221,18 @@ class _RoutePageState extends State<RoutePage> {
                 item == "AbsorbPointer" ? AbsorbPointerPage() :
                 item == "Navigator" ? NavigatorPage() :
                 item == "Opacity" ? OpacityPage() :
+                item == "DecoratedBox" ? DecoratedBoxPage() :
+                item == "FractionalTranslation" ? FractionalTranslationPage() :
+                item == "RotatedBox" ? RotatedBoxPage() :
+                item == "ClipOval" ? ClipOvalPage() :
+                item == "ClipPath" ? ClipPathPage() :
+                item == "ClipRect" ? ClipRectPage() :
+                item == "CustomPaint" ? CustomPaintPage() :
+                item == "BackdropFilter" ? BackdropFilterPage() :
                 item == "FutureBuilder" ? FutureBuilderPage() :
+                item == "StreamBuilder" ? StreamBuilderPage() :
+                item == "NestedScrollView" ? NestedScrollViewPage() :
+                item == "TabBar" ? TabBarPage() :
                 item == "Load" ? LoadPage() :
                 item == "Refresh" ? RefreshPage() :
                 null;

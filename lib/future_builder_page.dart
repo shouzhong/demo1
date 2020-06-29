@@ -15,7 +15,7 @@ class _FutureBuilderPageState extends State<FutureBuilderPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar(title: "FutureBuilder Page",),
-      body: FutureBuilder(
+      body: FutureBuilder<int>(
         future: _test(),
         builder: (context, snap) {
           if (snap.hasData) {
