@@ -1,0 +1,2 @@
+在项目目录下执行
+flutter packages pub run build_runner watch lib

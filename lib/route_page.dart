@@ -10,6 +10,7 @@ import 'package:demo1/backdrop_filter_page.dart';
 import 'package:demo1/clip_path_page.dart';
 import 'package:demo1/clip_rect_page.dart';
 import 'package:demo1/custom_paint_page.dart';
+import 'package:demo1/custom_scroll_view_page.dart';
 import 'package:demo1/decorated_box_page.dart';
 import 'package:demo1/dismissible_page.dart';
 import 'package:demo1/fractional_translation_page.dart';
@@ -17,6 +18,7 @@ import 'package:demo1/gesture_detector_page.dart';
 import 'package:demo1/ignore_pointer_page.dart';
 import 'package:demo1/long_press_draggable_page.dart';
 import 'package:demo1/nested_scroll_view_page.dart';
+import 'package:demo1/notification_listener_page.dart';
 import 'package:demo1/opacity_page.dart';
 import 'package:demo1/rotated_box_page.dart';
 import 'package:demo1/rotation_transition_page.dart';
@@ -51,6 +53,7 @@ import 'package:demo1/positioned_transition_page.dart';
 import 'package:demo1/refresh_indicator_page.dart';
 import 'package:demo1/refresh_page.dart';
 import 'package:demo1/row_page.dart';
+import 'package:demo1/single_child_scroll_view_page.dart';
 import 'package:demo1/size_transition_page.dart';
 import 'package:demo1/sized_box_page.dart';
 import 'package:demo1/slide_transition_page.dart';
@@ -148,7 +151,10 @@ class _RoutePageState extends State<RoutePage> {
     "FutureBuilder",
     "StreamBuilder",
     "NestedScrollView",
+    "SingleChildScrollView",
+    "CustomScrollView",
     "TabBar",
+    "NotificationListener",
     "Load",
     "Refresh",
   ];
@@ -161,6 +167,7 @@ class _RoutePageState extends State<RoutePage> {
         shrinkWrap: true,
         crossAxisCount: 2,
         childAspectRatio: 3,
+        physics: BouncingScrollPhysics(),
         children: [
           for (String item in tags)
             GestureDetector(
@@ -232,7 +239,10 @@ class _RoutePageState extends State<RoutePage> {
                 item == "FutureBuilder" ? FutureBuilderPage() :
                 item == "StreamBuilder" ? StreamBuilderPage() :
                 item == "NestedScrollView" ? NestedScrollViewPage() :
+                item == "SingleChildScrollView" ? SingleChildScrollViewPage() :
+                item == "CustomScrollView" ? CustomScrollViewPage() :
                 item == "TabBar" ? TabBarPage() :
+                item == "NotificationListener" ? NotificationListenerPage() :
                 item == "Load" ? LoadPage() :
                 item == "Refresh" ? RefreshPage() :
                 null;

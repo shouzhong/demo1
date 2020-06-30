@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:demo1/my_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -78,6 +79,14 @@ class _ImagePageState extends State<ImagePage> {
               AssetImage("images/ic_house.png"),
               size: 100.mpx,
               color: Colors.blue,
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            alignment: Alignment.center,
+            child: CachedNetworkImage(
+              height: 100.mpx,
+              imageUrl: "https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3984473917,238095211&fm=26&gp=0.jpg",
             ),
           ),
         ],
