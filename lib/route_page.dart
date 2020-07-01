@@ -16,6 +16,7 @@ import 'package:demo1/dismissible_page.dart';
 import 'package:demo1/fractional_translation_page.dart';
 import 'package:demo1/gesture_detector_page.dart';
 import 'package:demo1/ignore_pointer_page.dart';
+import 'package:demo1/load_layout_page.dart';
 import 'package:demo1/long_press_draggable_page.dart';
 import 'package:demo1/nested_scroll_view_page.dart';
 import 'package:demo1/notification_listener_page.dart';
@@ -157,6 +158,7 @@ class _RoutePageState extends State<RoutePage> {
     "NotificationListener",
     "Load",
     "Refresh",
+    "LoadLayout",
   ];
 
   @override
@@ -245,6 +247,7 @@ class _RoutePageState extends State<RoutePage> {
                 item == "NotificationListener" ? NotificationListenerPage() :
                 item == "Load" ? LoadPage() :
                 item == "Refresh" ? RefreshPage() :
+                item == "LoadLayout" ? LoadLayoutPage() :
                 null;
                 Navigator.push(context, MaterialPageRoute(builder: (context) => w));
               },

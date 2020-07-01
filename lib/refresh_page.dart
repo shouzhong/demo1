@@ -18,6 +18,12 @@ class _RefreshPageState extends State<RefreshPage> {
   int _count = 0;
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar(title: "Refresh Page",),

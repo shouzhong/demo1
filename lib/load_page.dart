@@ -33,8 +33,8 @@ class _LoadPageState extends State<LoadPage> {
             _loadState = LoadState.State_Loading;
           });
         },
-        successWidget: Center(
-          child: Text(_data),
+        successWidget: SingleChildScrollView(
+          child: Text(_data)
         ),
       ),
     );
