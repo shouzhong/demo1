@@ -29,12 +29,12 @@ class LoadLayoutController {
 class LoadLayout extends StatefulWidget {
   LoadLayout({
     Key key,
-    this.controller,
+    @required this.controller,
     this.firstLoad,
-    this.onLoad,
-    this.loadWidget,
-    this.errorWidget,
-    this.successWidget
+    @required this.onLoad,
+    @required this.loadWidget,
+    @required this.errorWidget,
+    @required this.successWidget
   }) : super(key: key);
 
   final LoadLayoutController controller;
